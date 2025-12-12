@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ModalWithSwipe } from '@libs/components/modals';
+import { ModalWithSwipe } from 'gasconsumer-ui-components/modals';
 import { ref } from 'vue';
 
 const props = defineProps<{

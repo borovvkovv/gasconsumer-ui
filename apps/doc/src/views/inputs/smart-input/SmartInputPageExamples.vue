@@ -18,7 +18,7 @@
       :prop-states="propStates"
       :component="
         defineAsyncComponent(() =>
-          import('@libs/components/inputs').then((libsComponents) => libsComponents.SmartInput),
+          import('gasconsumer-ui-components/inputs').then((libsComponents) => libsComponents.SmartInput),
         )
       "
     />
@@ -33,12 +33,12 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import { Size } from '@libs/components/enums';
-import { IconName } from '@libs/components/icons-enums';
-import type { ISmartInputProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import type { ISmartInputProps } from 'gasconsumer-ui-components/inputs-types';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
-import type { ISelectItem, SelectKeyType } from '@libs/components/selects-types';
+import type { ISelectItem, SelectKeyType } from 'gasconsumer-ui-components/selects-types';
 
 const options: Array<ISelectItem<SelectKeyType>> = [
   { title: 'Title1', value: 'Value1' },

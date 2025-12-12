@@ -22,11 +22,11 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { SwitcherButton } from '@libs/components/buttons';
-import type { Switcher } from '@libs/components/buttons-types';
-import { Size } from '@libs/components/enums';
-import { AppColor } from '@libs/components/enums';
-import { BaseButton } from '@libs/components/buttons';
+import { SwitcherButton } from 'gasconsumer-ui-components/buttons';
+import type { Switcher } from 'gasconsumer-ui-components/buttons-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { AppColor } from 'gasconsumer-ui-components/enums';
+import { BaseButton } from 'gasconsumer-ui-components/buttons';
 
 defineProps<{
   isSideBarCollapsed: boolean;

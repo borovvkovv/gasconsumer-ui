@@ -6,9 +6,9 @@ import type {
   IconMarkerNumberProps,
   IconWithAnimation,
   IconWithColor,
-} from '@libs/components/icons-types';
-import { IconName } from '@libs/components/icons-enums';
-import { Size } from '@libs/components/enums';
+} from 'gasconsumer-ui-components/icons-types';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { Size } from 'gasconsumer-ui-components/enums';
 
 export type AllIconsProps = DeepMergeTypes<
   [IconBase, IconWithAnimation, IconWithColor, IconBellProps, IconDocumentExtensionProps, IconMarkerNumberProps]

@@ -14,9 +14,9 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { Size } from '@libs/components/enums';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { SimpleSelect } from '@libs/components/selects';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
 
 const modelValue = defineModel<ISelectItem>();
 

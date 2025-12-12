@@ -110,18 +110,18 @@ export default {
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { InputType } from '@libs/components/inputs-enums';
-import { BaseInput, AppCheckbox } from '@libs/components/inputs';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
+import { BaseInput, AppCheckbox } from 'gasconsumer-ui-components/inputs';
 import ColorInput from '@/views/icons/icon-prop-changer/ColorInput.vue';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { SimpleSelect } from '@libs/components/selects';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
 import { IconComponents } from '@/views/icons/utils/models';
 import { allIconsPropsNames, type AllIconsProps } from './utils/models';
 import FontWeightSelect from './icon-prop-changer/FontWeightSelect.vue';
 import FontSizeSelect from './icon-prop-changer/FontSizeSelect.vue';
 import { getIconProps } from './utils';
-import type { IconName } from '@libs/components/icons-enums';
+import type { IconName } from 'gasconsumer-ui-components/icons-enums';
 
 const selectedIconRef = ref();
 const selectedIconProps = ref<AllIconsProps>({});

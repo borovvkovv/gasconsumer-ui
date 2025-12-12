@@ -1,4 +1,4 @@
-import type { ICalendarRangeSelectProps } from '@libs/components/inputs-types';
+import type { ICalendarRangeSelectProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   type StringKeys,
   type SizeKeys,

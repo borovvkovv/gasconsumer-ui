@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { useIMask } from 'vue-imask';
 import { useCssModule, watch } from 'vue';
-import { InputLabel } from '@libs/components/inputs';
+import { InputLabel } from 'gasconsumer-ui-components/inputs';
 
 defineProps<{
   label: string;

@@ -82,7 +82,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppCheckbox } from '@libs/components/inputs';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
 
 const isCheckStates = [
   {

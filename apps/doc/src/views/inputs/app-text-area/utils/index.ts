@@ -1,4 +1,4 @@
-import type { IAppTextAreaProps } from '@libs/components/inputs-types';
+import type { IAppTextAreaProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   appTextAreaPropsNamesTypes,
   type BooleanKeys,

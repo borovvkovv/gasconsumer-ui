@@ -79,19 +79,19 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput } from '@libs/components/inputs';
-import { AppCheckbox } from '@libs/components/inputs';
-import { MultiSelect } from '@libs/components/selects';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import { MultiSelect } from 'gasconsumer-ui-components/selects';
 import InputSizeSelect from '@/views/inputs/input-prop-changer/InputSizeSelect.vue';
 import ErrorListChanger from '@/views/inputs/input-prop-changer/ErrorListChanger.vue';
 import ISelectItemsChanger from '@/views/inputs/input-prop-changer/ISelectItemsChanger.vue';
-import { SimpleSelect } from '@libs/components/selects';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
 import { simpleSelectPropsNames } from './utils/models';
 import { isBoolean, isISelectItem, isISelectItemArray, isNumber, isSize, isString, isStringArray } from './utils';
 import ISelectItemSelect from '@/views/inputs/input-prop-changer/ISelectItemSelect.vue';
-import type { ISimpleSelectProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import type { ISimpleSelectProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 
 const multiSelectRef = ref<InstanceType<typeof MultiSelect>>();
 

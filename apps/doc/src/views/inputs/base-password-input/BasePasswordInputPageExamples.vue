@@ -16,7 +16,7 @@
       :prop-states="propStates"
       :component="
         defineAsyncComponent(() =>
-          import('@libs/components/inputs').then((libsComponents) => libsComponents.BasePasswordInput),
+          import('gasconsumer-ui-components/inputs').then((libsComponents) => libsComponents.BasePasswordInput),
         )
       "
     />
@@ -31,8 +31,8 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import { Size } from '@libs/components/enums';
-import type { IPasswordInputProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { IPasswordInputProps } from 'gasconsumer-ui-components/inputs-types';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
 

@@ -1,7 +1,7 @@
 import { RouteName } from '@/router/enum';
 import type { PageLink, MenuLink } from '@/router/types';
 import i18n from '@/translations';
-import { IconName } from '@libs/components/icons-enums';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
 import { computed, type ComputedRef } from 'vue';
 
 export const pagesLinks: ComputedRef<PageLink[]> = computed(() => [

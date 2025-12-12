@@ -1,4 +1,4 @@
-import type { ISmartInputProps } from '@libs/components/inputs-types';
+import type { ISmartInputProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   smartInputPropsNamesTypes,
   type BooleanKeys,

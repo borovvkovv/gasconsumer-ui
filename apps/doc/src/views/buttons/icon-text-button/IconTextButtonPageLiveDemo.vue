@@ -72,20 +72,20 @@ export default {
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput } from '@libs/components/inputs';
-import type { IIconTextButtonProps } from '@libs/components/buttons-types';
-import { IconPosition } from '@libs/components/buttons-enums';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import type { IIconTextButtonProps } from 'gasconsumer-ui-components/buttons-types';
+import { IconPosition } from 'gasconsumer-ui-components/buttons-enums';
 import ButtonSizeSelect from '../button-prop-changer/ButtonSizeSelect.vue';
 import ButtonColorSelect from '../button-prop-changer/ButtonColorSelect.vue';
 import ButtonTypeSelect from '../button-prop-changer/ButtonTypeSelect.vue';
 import ButtonDisabledCheckbox from '../button-prop-changer/ButtonDisabledCheckbox.vue';
 import ButtonLoadingCheckbox from '../button-prop-changer/ButtonLoadingCheckbox.vue';
-import { IconName } from '@libs/components/icons-enums';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
 import { IconComponents } from '@/views/icons/utils/models';
-import { SimpleSelect } from '@libs/components/selects';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { IconTextButton } from '@libs/components/buttons';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { IconTextButton } from 'gasconsumer-ui-components/buttons';
 
 const iconTextButtonRef = ref();
 const iconTextButtonProps = ref<IIconTextButtonProps>({ iconName: IconName.IconNone, text: '' });

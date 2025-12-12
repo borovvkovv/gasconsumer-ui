@@ -40,9 +40,9 @@
 import { computed, ref } from 'vue';
 import type { PageLink } from '@/router/types';
 import type { RouteLocationNamedRaw } from 'vue-router';
-import { AppIcon } from '@libs/components';
-import { AppLink } from '@libs/components/app-link';
-import { IconName } from '@libs/components/icons-enums';
+import { AppIcon } from 'gasconsumer-ui-components';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
 import SideBarMenuLinkTitlePopup from '@/components/side-bar/SideBarMenuLinkTitlePopup.vue';
 
 const props = defineProps<{

@@ -1,5 +1,5 @@
 import type { KeyAndType, ValueTypeWithKeysWithValueType } from '@/views/utils/models';
-import type { ICalendarSelectProps } from '@libs/components/inputs-types';
+import type { ICalendarSelectProps } from 'gasconsumer-ui-components/inputs-types';
 
 export type DateKeys = ValueTypeWithKeysWithValueType<Required<ICalendarSelectProps>>['Date'];
 export type StringKeys = ValueTypeWithKeysWithValueType<Required<ICalendarSelectProps>>['string'];

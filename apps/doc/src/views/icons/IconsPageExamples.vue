@@ -8,8 +8,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { AppTable } from '@libs/components/table';
-import type { TTableData } from '@libs/components/table-types';
+import { AppTable } from 'gasconsumer-ui-components/table';
+import type { TTableData } from 'gasconsumer-ui-components/table-types';
 import { buildDesignSystemIconsExampleTable } from './utils';
 import { designSystemIcons } from './utils/models';
 

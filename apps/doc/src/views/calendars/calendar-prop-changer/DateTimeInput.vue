@@ -26,7 +26,7 @@ export default {
 <script setup lang="ts">
 import { computed } from 'vue';
 import { format } from '@/utils/date';
-import { InputLabel } from '@libs/components/inputs';
+import { InputLabel } from 'gasconsumer-ui-components/inputs';
 
 const dateTime = defineModel<Date | undefined>();
 

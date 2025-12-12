@@ -17,7 +17,7 @@
       :prop-states="propStates"
       :component="
         defineAsyncComponent(() =>
-          import('@libs/components/selects').then((libsComponents) => libsComponents.CalendarSelect),
+          import('gasconsumer-ui-components/selects').then((libsComponents) => libsComponents.CalendarSelect),
         )
       "
     />
@@ -32,11 +32,11 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import { Size } from '@libs/components/enums';
+import { Size } from 'gasconsumer-ui-components/enums';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
-import type { ICalendarSelectProps } from '@libs/components/inputs-types';
-import { CalendarType } from '@libs/components/calendars-enums';
+import type { ICalendarSelectProps } from 'gasconsumer-ui-components/inputs-types';
+import { CalendarType } from 'gasconsumer-ui-components/calendars-enums';
 import { startOfDay } from '@/utils/date';
 
 const modelValueStates: ComponentPropStates<ICalendarSelectProps> = {

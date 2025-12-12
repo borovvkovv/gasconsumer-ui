@@ -1,4 +1,4 @@
-import type { IMultipleSelectProps } from '@libs/components/inputs-types';
+import type { IMultipleSelectProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   multipleSelectPropsNamesTypes,
   type BooleanKeys,

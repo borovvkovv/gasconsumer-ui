@@ -82,9 +82,9 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppColor, Size } from '@libs/components/enums';
-import { IconButton } from '@libs/components/buttons';
-import { IconName } from '@libs/components/icons-enums';
+import { AppColor, Size } from 'gasconsumer-ui-components/enums';
+import { IconButton } from 'gasconsumer-ui-components/buttons';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
 
 const sizes = [
   {

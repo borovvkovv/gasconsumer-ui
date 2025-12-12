@@ -73,13 +73,13 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput, AppCheckbox } from '@libs/components/inputs';
-import type { IMultipleSelectProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput, AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import type { IMultipleSelectProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 import { multipleSelectPropsNames } from './utils/models';
 import { isBoolean, isISelectItemArray, isNumber, isSize, isString, isStringArray } from './utils';
-import { MultiSelect } from '@libs/components/selects';
+import { MultiSelect } from 'gasconsumer-ui-components/selects';
 import InputSizeSelect from '@/views/inputs/input-prop-changer/InputSizeSelect.vue';
 import ErrorListChanger from '@/views/inputs/input-prop-changer/ErrorListChanger.vue';
 import ISelectItemsChanger from '@/views/inputs/input-prop-changer/ISelectItemsChanger.vue';

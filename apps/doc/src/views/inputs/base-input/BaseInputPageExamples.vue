@@ -18,7 +18,9 @@
       :key="propStatesIndex"
       :prop-states="propStates"
       :component="
-        defineAsyncComponent(() => import('@libs/components/inputs').then((libsComponents) => libsComponents.BaseInput))
+        defineAsyncComponent(() =>
+          import('gasconsumer-ui-components/inputs').then((libsComponents) => libsComponents.BaseInput),
+        )
       "
     />
   </div>
@@ -32,9 +34,9 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import { Size } from '@libs/components/enums';
-import { IconName } from '@libs/components/icons-enums';
-import type { IBaseInputProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import type { IBaseInputProps } from 'gasconsumer-ui-components/inputs-types';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
 

@@ -20,10 +20,10 @@ export default {
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { Size } from '@libs/components/enums';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { SimpleSelect } from '@libs/components/selects';
-import type { ICalendarSelectProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
+import type { ICalendarSelectProps } from 'gasconsumer-ui-components/inputs-types';
 import { InactiveRule, inactiveRuleErrorTexts } from '../utils/models';
 
 const inactiveRuleKey = defineModel<InactiveRule>();

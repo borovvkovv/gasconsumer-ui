@@ -19,9 +19,9 @@
 </template>
 
 <script setup lang="ts">
-import { AppLink } from '@libs/components/app-link';
-import { LinksStyles } from '@libs/components/app-link-enums';
-import { IconMarker } from '@libs/components/icons';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
+import { LinksStyles } from 'gasconsumer-ui-components/app-link-enums';
+import { IconMarker } from 'gasconsumer-ui-components/icons';
 import type { LinkBase } from './utils/models';
 
 defineProps<{

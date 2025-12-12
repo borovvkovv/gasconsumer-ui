@@ -19,11 +19,11 @@
 
 <script setup lang="ts">
 import { ref, useCssModule } from 'vue';
-import { AppIcon } from '@libs/components';
+import { AppIcon } from 'gasconsumer-ui-components';
 import { changeCollapse } from '@/components/side-bar/utils';
 import { SIDE_BAR_ANIMATION_DURATION_MS } from '@/components/side-bar/utils/models';
-import { IconName } from '@libs/components/icons-enums';
-import { AppLink } from '@libs/components/app-link';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
 
 const props = defineProps<{
   isInitiallyCollapsed: boolean;

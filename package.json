@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "app": "yarn workspace @apps/doc",
-    "lib": "yarn workspace @libs/components",
+    "lib": "yarn workspace gasconsumer-ui-components",
     "lint-app": "eslint ./apps/doc/src --ext .vue,.js,.jsx,.ts,.tsx",
     "lint-lib": "eslint ./libs/components/src --ext .vue,.js,.jsx,.ts,.tsx",
     "format-app": "prettier --write  ./apps/doc/src",

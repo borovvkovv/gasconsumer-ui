@@ -148,14 +148,14 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { AppCheckbox } from '@libs/components/inputs';
-import type { IAppRadiobuttonProps } from '@libs/components/inputs-types';
-import { BaseInput } from '@libs/components/inputs';
-import { AppRadiobutton } from '@libs/components/inputs';
-import { AppIcon } from '@libs/components';
-import { IconName } from '@libs/components/icons-enums';
-import { AppLink } from '@libs/components/app-link';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import type { IAppRadiobuttonProps } from 'gasconsumer-ui-components/inputs-types';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { AppRadiobutton } from 'gasconsumer-ui-components/inputs';
+import { AppIcon } from 'gasconsumer-ui-components';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
 
 const appRadiobuttonModelValuePropName: keyof Pick<IAppRadiobuttonProps, 'modelValue'> = 'modelValue';
 const appRadiobuttonValuePropName: keyof Pick<IAppRadiobuttonProps, 'value'> = 'value';

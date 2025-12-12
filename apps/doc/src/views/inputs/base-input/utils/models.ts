@@ -1,5 +1,5 @@
 import type { KeyAndType, ValueTypeWithKeysWithValueType } from '@/views/utils/models';
-import type { IBaseInputProps } from '@libs/components/inputs-types';
+import type { IBaseInputProps } from 'gasconsumer-ui-components/inputs-types';
 
 export type BooleanKeys = ValueTypeWithKeysWithValueType<Required<IBaseInputProps>>['boolean'];
 export type IClickableIconKeys = ValueTypeWithKeysWithValueType<Required<IBaseInputProps>>['IClickableIcon'];

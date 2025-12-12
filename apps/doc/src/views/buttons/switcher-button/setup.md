@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  import {SwitcherButton} from '@libs/components/buttons/SwitcherButton.vue';
+  import {SwitcherButton} from 'gasconsumer-ui-components/buttons/SwitcherButton.vue';
 
   const model = ref<string>();
   const switcher = {

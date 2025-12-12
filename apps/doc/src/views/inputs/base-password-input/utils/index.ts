@@ -1,4 +1,4 @@
-import type { IPasswordInputProps } from '@libs/components/inputs-types';
+import type { IPasswordInputProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   basePasswordInputPropsNamesTypes,
   type BooleanKeys,

@@ -100,15 +100,15 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { AppIcon } from '@libs/components';
-import { IconName } from '@libs/components/icons-enums';
-import { AppLink } from '@libs/components/app-link';
-import { BaseInput } from '@libs/components/inputs';
-import { AppCheckbox } from '@libs/components/inputs';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { SimpleSelect } from '@libs/components/selects';
-import type { IAppCheckboxProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { AppIcon } from 'gasconsumer-ui-components';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
+import type { IAppCheckboxProps } from 'gasconsumer-ui-components/inputs-types';
 
 const appCheckboxModelValuePropName: keyof Pick<IAppCheckboxProps, 'modelValue'> = 'modelValue';
 const appCheckboxLabelPropName: keyof Pick<IAppCheckboxProps, 'label'> = 'label';

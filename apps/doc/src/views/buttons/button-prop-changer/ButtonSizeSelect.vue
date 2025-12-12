@@ -20,10 +20,10 @@ export default {
 
 <script setup lang="ts">
 import { computed, type ComponentInstance } from 'vue';
-import { Size } from '@libs/components/enums';
-import { SimpleSelect } from '@libs/components/selects';
-import type { ISelectItem } from '@libs/components/selects-types';
-import type { IBaseButtonProps } from '@libs/components/buttons-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import type { IBaseButtonProps } from 'gasconsumer-ui-components/buttons-types';
 
 const buttonProps = defineModel<IBaseButtonProps>();
 const props = defineProps<{

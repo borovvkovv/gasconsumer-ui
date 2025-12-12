@@ -10,5 +10,5 @@
 
 <script setup lang="ts">
 import IconArrowLeft from '@/components/icons/IconArrowLeft.vue';
-import {AppIcon} from '@libs/components';
+import {AppIcon} from 'gasconsumer-ui-components';
 </script>
