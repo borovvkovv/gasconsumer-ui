@@ -1,10 +1,10 @@
 {
   "name": "gasconsumer-ui-components",
   "version": "1.0.0",
+  "license": "MIT",
   "private": false,
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
