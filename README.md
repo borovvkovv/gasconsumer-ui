@@ -1,47 +1,45 @@
-# О чем проект
+# About the project
 
-Данный монорепозиторий содержит
+The monorepo contains:
 
-- **библиотеку компонентов**, разработанных в рамках проекта ["Личный кабинет промышленного потребителя природного газа Группы компаний ООО “Газпром Межрегионгаз”"](https://gasconsumer.ru).
-- [**демонстрацию**](https://gasconsumer-ui.ru) возможностей и состояний компонент.
+- **UI components library** developed for the ["gas consumer personal account"](https://gasconsumer.ru).
+- [**documentation**](https://gasconsumer-ui.ru).
 
-# Что содержит библиотека компонентов
+# What the UI components library contains
 
-- [Разметка](https://gasconsumer-ui.ru/layout)
-- [Кнопки](https://gasconsumer-ui.ru/text-button)
-- [Чек-боксы](https://gasconsumer-ui.ru/checkbox)
-- [Выбор дат(-ы)](https://gasconsumer-ui.ru/calendar-dropdown)
-- Стилизованные графики
+- [Layout](https://gasconsumer-ui.ru/layout)
+- [Buttons](https://gasconsumer-ui.ru/text-button)
+- [Checkboxes](https://gasconsumer-ui.ru/checkbox)
+- [Calendar select](https://gasconsumer-ui.ru/calendar-dropdown)
+- Styled graphs
 - Drag and drop
-- Адаптированное меню
-- Хинты
-- [Иконки](https://gasconsumer-ui.ru/icons)
-- [Поля ввода](https://gasconsumer-ui.ru/base-input)
-- Модальные окна
-- Попапы
-- Таблицы
-- [Выбор из выпадающего списка](https://gasconsumer-ui.ru/simple-select)
-- Лоадеры
-- Всплывающие сообщения
+- Adaptive menu
+- Hints
+- [Icons](https://gasconsumer-ui.ru/icons)
+- [Inputs](https://gasconsumer-ui.ru/base-input)
+- Modals
+- Popups
+- Tables
+- [Selects](https://gasconsumer-ui.ru/simple-select)
+- Loaders
+- Popup messages
 
-# Лицензия
+# License <a href="https://github.com/buefy/buefy/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/buefy.svg?logo=github" /></a>
 
-- Вы можете использовать нашу библиотеку как в коммерческих, так и в личных проектах.
-- Пользовательские пакеты Prizm доступны по лицензии MIT [Лицензия](https://github.com/borovvkovv/gasconsumer-ui/blob/master/LICENSE.txt).
-- Подробнее об этой лицензии читайте [здесь](https://opensource.org/license/mit/)
+Code released under [MIT](https://opensource.org/license/mit/) license.
 
-# Благодарность
+# Words of gratitude
 
-🔹 Библиотека основана на фреймворке Vue. Спасибо [команде Vue](https://github.com/vuejs)
+🔹 The library is built with the Vue framework. Thank you to the [Vue team](https://github.com/vuejs)
 
-🔹 Монорепозиторий основан на yarn workspaces. Спасибо [команде Yarn](https://github.com/yarnpkg)
+🔹 The monorepo uses Yarn Workspaces. Thank you to the [Yarn team](https://github.com/yarnpkg)
 
-🔹 Библиотека и монорепозиторий используют сборщик Vite. Спасибо [команде Vite](https://github.com/vitejs)
+🔹 The library and monorepo use Vite build tool. Thank you to the [Vite team](https://github.com/vitejs)
 
-🔹 Также мы хотим поблагодарить все команды из списка
+🔹 Also, thank you to all the teams listed below:
 
 - [vue-router](https://github.com/vuejs/router)
-- [tailwind](https://github.com/tailwindlabs/tailwindcss)
+- [tailwind css](https://github.com/tailwindlabs/tailwindcss)
 - [sass](https://github.com/sass)
 - [chart-js](https://github.com/chartjs/Chart.js)
 - [headlessui](https://github.com/tailwindlabs/headlessui)
