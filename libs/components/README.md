@@ -1,7 +1,7 @@
 # gasconsumer-ui-components
 
-[![npm](https://img.shields.io/npm/v/gasconsumer-ui-components1?color=4f46e5)](https://www.npmjs.com/package/gasconsumer-ui-components)
-[![npm](https://img.shields.io/npm/dw/gasconsumer-ui-components1?color=4f46e5)](https://www.npmjs.com/package/gasconsumer-ui-components)
+[![npm](https://img.shields.io/npm/v/gasconsumer-ui-components?color=4f46e5)](https://www.npmjs.com/package/gasconsumer-ui-components)
+[![npm](https://img.shields.io/npm/dw/gasconsumer-ui-components?color=4f46e5)](https://www.npmjs.com/package/gasconsumer-ui-components)
 [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen)](https://vuejs.org)
 [![Vite](https://img.shields.io/badge/Vite-5.x-orange)](https://vitejs.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://typescriptlang.org)

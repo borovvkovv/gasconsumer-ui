@@ -208,26 +208,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Automatic GitHub Release
-        uses: justincy/github-action-npm-release@2.0.1
-        id: release
-
-      - uses: actions/setup-node@v1
-        if: steps.release.outputs.released == 'true'
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
 
-      - name: Install dependencies
-        if: steps.release.outputs.released == 'true'
-        run: yarn install
-
-      - name: Build library
-        if: steps.release.outputs.released == 'true'
-        run: yarn lib build-only:production
+      - name: Automatic GitHub Release
+        uses: justincy/github-action-npm-release@2.0.2
+        id: release
+        with:
+          path: ${{ format('{0}/{1}', github.workspace, 'libs/components') }}
 
       - name: Publish
         if: steps.release.outputs.released == 'true'
-        run: yarn lib publish
+        run: |
+          yarn install
+          yarn lib build-only:production
+          yarn lib publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUBTOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
