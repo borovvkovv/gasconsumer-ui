@@ -55,7 +55,7 @@ import SideBarLogo from '@/components/side-bar/SideBarLogo.vue';
 import { SIDE_BAR_ANIMATION_DURATION_MS } from '@/components/side-bar/utils/models';
 import { changeCollapse } from './utils';
 import type { PageLink } from '@/router/types';
-import { AppLink } from '@libs/components/app-link';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
 
 const props = withDefaults(
   defineProps<{

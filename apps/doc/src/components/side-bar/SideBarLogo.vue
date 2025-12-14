@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { ref, useCssModule } from 'vue';
-import { IconNone } from '@libs/components/icons';
+import { IconNone } from 'gasconsumer-ui-components/icons';
 import { changeCollapse } from '@/components/side-bar/utils';
 import { SIDE_BAR_ANIMATION_DURATION_MS } from '@/components/side-bar/utils/models';
 import IconGazpromSmall from '../icons/IconGazpromSmall.vue';

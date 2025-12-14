@@ -48,11 +48,11 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { Size } from '@libs/components/enums';
-import { IconName } from '@libs/components/icons-enums';
-import { BaseInput } from '@libs/components/inputs';
-import { AppLink } from '@libs/components/app-link';
-import { AppIcon } from '@libs/components';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
+import { AppIcon } from 'gasconsumer-ui-components';
 
 const errorList = defineModel<Array<string> | undefined>();
 

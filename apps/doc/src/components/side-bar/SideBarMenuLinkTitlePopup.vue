@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { BasePopup } from '@libs/components/popup';
+import { BasePopup } from 'gasconsumer-ui-components/popup';
 import { ref } from 'vue';
 
 defineProps<{

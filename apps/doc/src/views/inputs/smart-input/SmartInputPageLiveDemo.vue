@@ -84,12 +84,12 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput, AppCheckbox } from '@libs/components/inputs';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput, AppCheckbox } from 'gasconsumer-ui-components/inputs';
 import IconSelect from '../input-prop-changer/IconSelect.vue';
 import InputSizeSelect from '../input-prop-changer/InputSizeSelect.vue';
-import type { ISmartInputProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import type { ISmartInputProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 import ErrorListChanger from '../input-prop-changer/ErrorListChanger.vue';
 import {
   isBoolean,
@@ -101,7 +101,7 @@ import {
   isString,
   isStringArray,
 } from './utils';
-import { SmartInput } from '@libs/components/inputs';
+import { SmartInput } from 'gasconsumer-ui-components/inputs';
 import { smartInputPropsNames } from './utils/models';
 import ISelectItemSelect from '../input-prop-changer/ISelectItemSelect.vue';
 import ISelectItemsChanger from '../input-prop-changer/ISelectItemsChanger.vue';

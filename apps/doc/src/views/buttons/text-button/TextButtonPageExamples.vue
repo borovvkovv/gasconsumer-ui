@@ -54,8 +54,8 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppColor, Size } from '@libs/components/enums';
-import { TextButton } from '@libs/components/buttons';
+import { AppColor, Size } from 'gasconsumer-ui-components/enums';
+import { TextButton } from 'gasconsumer-ui-components/buttons';
 
 const sizes = [
   {

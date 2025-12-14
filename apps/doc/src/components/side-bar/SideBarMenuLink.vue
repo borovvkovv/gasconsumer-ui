@@ -41,9 +41,9 @@ import type { RouteLocationMatched } from 'vue-router';
 import type { HeaderTab, PageLink } from '@/router/types';
 import SideBarMenuLinkDropDown from '@/components/side-bar/SideBarMenuLinkDropDown.vue';
 import SideBarMenuLinkTitle from '@/components/side-bar/SideBarMenuLinkTitle.vue';
-import { BaseSimpleDropDown } from '@libs/components/selects';
-import { IconName } from '@libs/components/icons-enums';
-import { AppIcon } from '@libs/components';
+import { BaseSimpleDropDown } from 'gasconsumer-ui-components/selects';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import { AppIcon } from 'gasconsumer-ui-components';
 import { pagesLinks } from '@/router/links';
 
 const props = defineProps<{

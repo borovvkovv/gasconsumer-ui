@@ -1,4 +1,4 @@
-import type { ICalendarSelectProps } from '@libs/components/inputs-types';
+import type { ICalendarSelectProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   calendarSelectPropsNamesTypes,
   type DateKeys,

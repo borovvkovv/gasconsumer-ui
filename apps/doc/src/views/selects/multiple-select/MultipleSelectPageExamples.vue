@@ -17,7 +17,7 @@
       :prop-states="propStates"
       :component="
         defineAsyncComponent(() =>
-          import('@libs/components/selects').then((libsComponents) => libsComponents.MultiSelect),
+          import('gasconsumer-ui-components/selects').then((libsComponents) => libsComponents.MultiSelect),
         )
       "
     />
@@ -32,9 +32,9 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import { Size } from '@libs/components/enums';
-import type { ISelectItem } from '@libs/components/selects-types';
-import type { IMultipleSelectProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import type { IMultipleSelectProps } from 'gasconsumer-ui-components/inputs-types';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
 

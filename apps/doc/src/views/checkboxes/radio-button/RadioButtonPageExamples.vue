@@ -66,9 +66,9 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppRadiobutton } from '@libs/components/inputs';
-import type { IAppRadiobuttonProps } from '@libs/components/inputs-types';
-import { AppLoading } from '@libs/components';
+import { AppRadiobutton } from 'gasconsumer-ui-components/inputs';
+import type { IAppRadiobuttonProps } from 'gasconsumer-ui-components/inputs-types';
+import { AppLoading } from 'gasconsumer-ui-components';
 
 const firstRadiobutton: IAppRadiobuttonProps = {
   modelValue: 'value1',

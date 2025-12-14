@@ -1,4 +1,4 @@
-import type { ISimpleInputProps } from '@libs/components/inputs-types';
+import type { ISimpleInputProps } from 'gasconsumer-ui-components/inputs-types';
 import {
   baseSimpleInputPropsNamesTypes,
   type BooleanKeys,

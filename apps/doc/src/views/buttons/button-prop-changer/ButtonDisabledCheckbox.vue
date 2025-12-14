@@ -12,8 +12,8 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppCheckbox } from '@libs/components/inputs';
-import type { IBaseButtonProps } from '@libs/components/buttons-types';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import type { IBaseButtonProps } from 'gasconsumer-ui-components/buttons-types';
 import { computed, type ComponentInstance } from 'vue';
 
 const buttonProps = defineModel<IBaseButtonProps>();

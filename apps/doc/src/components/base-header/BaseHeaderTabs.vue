@@ -27,9 +27,9 @@
 
 <script setup lang="ts">
 import type { HeaderTab } from '@/router/types';
-import { AppLink } from '@libs/components/app-link';
-import { LinksStyles } from '@libs/components/app-link-enums';
-import { AppIcon } from '@libs/components';
+import { AppLink } from 'gasconsumer-ui-components/app-link';
+import { LinksStyles } from 'gasconsumer-ui-components/app-link-enums';
+import { AppIcon } from 'gasconsumer-ui-components';
 
 defineProps<{
   tabs: HeaderTab[];

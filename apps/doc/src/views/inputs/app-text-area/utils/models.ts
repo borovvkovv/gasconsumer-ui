@@ -1,5 +1,5 @@
 import type { KeyAndType, ValueTypeWithKeysWithValueType } from '@/views/utils/models';
-import type { IAppTextAreaProps } from '@libs/components/inputs-types';
+import type { IAppTextAreaProps } from 'gasconsumer-ui-components/inputs-types';
 
 export type BooleanKeys = ValueTypeWithKeysWithValueType<Required<IAppTextAreaProps>>['boolean'];
 export type StringArrayKeys = ValueTypeWithKeysWithValueType<Required<IAppTextAreaProps>>['StringArray'];

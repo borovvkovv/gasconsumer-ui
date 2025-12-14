@@ -87,20 +87,20 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput } from '@libs/components/inputs';
-import { AppCheckbox } from '@libs/components/inputs';
-import type { ICalendarRangeSelectProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { AppCheckbox } from 'gasconsumer-ui-components/inputs';
+import type { ICalendarRangeSelectProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 import InputSizeSelect from '@/views/inputs/input-prop-changer/InputSizeSelect.vue';
 import { calendarRangePropsNames } from './utils/models';
 import { isBoolean, isSize, isString, isNumber, isDate, isPredicate, isCalendarTypeKeysArray } from './utils';
-import { CalendarType } from '@libs/components/calendars-enums';
+import { CalendarType } from 'gasconsumer-ui-components/calendars-enums';
 import DateTimeInput from '../calendar-prop-changer/DateTimeInput.vue';
 import IsInactiveRuleSelect from '../calendar-prop-changer/IsInactiveRuleSelect.vue';
 import { InactiveRule, isInactiveRules } from '../utils/models';
 import CalendarTypeSelect from '../calendar-prop-changer/CalendarTypeSelect.vue';
-import { CalendarRangeSelect } from '@libs/components/selects';
+import { CalendarRangeSelect } from 'gasconsumer-ui-components/selects';
 import { addDays } from '@/utils/date';
 
 const calendarRangeSelectRef = ref<InstanceType<typeof CalendarRangeSelect>>();

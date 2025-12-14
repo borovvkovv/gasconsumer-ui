@@ -1,9 +1,9 @@
-import type { CalendarType } from '@libs/components/calendars-enums';
-import type { IconName } from '@libs/components/icons-enums';
-import type { IClickableIcon, IconShowMode } from '@libs/components/inputs-types';
-import type { InputType } from '@libs/components/inputs-enums';
-import type { ISelectItem } from '@libs/components/selects-types';
-import type { Size } from '@libs/components/enums';
+import type { CalendarType } from 'gasconsumer-ui-components/calendars-enums';
+import type { IconName } from 'gasconsumer-ui-components/icons-enums';
+import type { IClickableIcon, IconShowMode } from 'gasconsumer-ui-components/inputs-types';
+import type { InputType } from 'gasconsumer-ui-components/inputs-enums';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import type { Size } from 'gasconsumer-ui-components/enums';
 
 export type PortalTableModel = {
   name: string;

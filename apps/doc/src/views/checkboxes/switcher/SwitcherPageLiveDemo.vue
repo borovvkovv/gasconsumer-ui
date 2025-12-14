@@ -44,9 +44,9 @@ export default {
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput, AppCheckbox, AppSwitcher } from '@libs/components/inputs';
-import type { IAppSwitcherProps } from '@libs/components/inputs-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput, AppCheckbox, AppSwitcher } from 'gasconsumer-ui-components/inputs';
+import type { IAppSwitcherProps } from 'gasconsumer-ui-components/inputs-types';
 
 const appSwitcherRef = ref();
 const appSwitcherProps = ref<IAppSwitcherProps>({ modelValue: true });

@@ -19,7 +19,7 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { SwitcherButton } from '@libs/components/buttons';
+import { SwitcherButton } from 'gasconsumer-ui-components/buttons';
 
 const model = ref<string>();
 const switcher = {

@@ -60,10 +60,10 @@ import ButtonColorSelect from '../button-prop-changer/ButtonColorSelect.vue';
 import ButtonTypeSelect from '../button-prop-changer/ButtonTypeSelect.vue';
 import ButtonDisabledCheckbox from '../button-prop-changer/ButtonDisabledCheckbox.vue';
 import ButtonLoadingCheckbox from '../button-prop-changer/ButtonLoadingCheckbox.vue';
-import { BaseInput } from '@libs/components/inputs';
-import { TextButton } from '@libs/components/buttons';
-import { Size } from '@libs/components/enums';
-import type { ITextButtonProps } from '@libs/components/buttons-types';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { TextButton } from 'gasconsumer-ui-components/buttons';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { ITextButtonProps } from 'gasconsumer-ui-components/buttons-types';
 
 const textButtonRef = ref();
 const textButtonProps = ref<ITextButtonProps>({ text: '' });

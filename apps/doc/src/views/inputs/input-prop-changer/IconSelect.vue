@@ -15,10 +15,10 @@ export default {
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { Size } from '@libs/components/enums';
-import type { ISelectItem } from '@libs/components/selects-types';
-import { SimpleSelect } from '@libs/components/selects';
-import { IconName } from '@libs/components/icons-enums';
+import { Size } from 'gasconsumer-ui-components/enums';
+import type { ISelectItem } from 'gasconsumer-ui-components/selects-types';
+import { SimpleSelect } from 'gasconsumer-ui-components/selects';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
 import { IconComponents } from '@/views/icons/utils/models';
 
 const modelValue = defineModel<IconName>();

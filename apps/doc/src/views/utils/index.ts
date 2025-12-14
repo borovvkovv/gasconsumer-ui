@@ -10,10 +10,10 @@ import type Token from 'markdown-it/lib/token.mjs';
 //   TPortalData,
 //   TPortalHeaderRow,
 //   TPortalRow,
-// } from '@libs/components/portal-table/utils/models';
-// import { IconName } from '@libs/components/icons/models';
-// import { LinksStyles } from '@libs/components/app-link/utils/models';
-// import type { ISelectItem } from '@libs/components/selects/models';
+// } from 'gasconsumer-ui-components/portal-table/utils/models';
+// import { IconName } from 'gasconsumer-ui-components/icons/models';
+// import { LinksStyles } from 'gasconsumer-ui-components/app-link/utils/models';
+// import type { ISelectItem } from 'gasconsumer-ui-components/selects/models';
 
 /**
  * Получить отфильтрованные тестовые данные для портальной таблицы

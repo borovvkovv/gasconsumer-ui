@@ -15,7 +15,7 @@
       :prop-states="propStates"
       :component="
         defineAsyncComponent(() =>
-          import('@libs/components/inputs').then((libsComponents) => libsComponents.AppTextArea),
+          import('gasconsumer-ui-components/inputs').then((libsComponents) => libsComponents.AppTextArea),
         )
       "
     />
@@ -30,7 +30,7 @@ export default {
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
-import type { IAppTextAreaProps } from '@libs/components/inputs-types';
+import type { IAppTextAreaProps } from 'gasconsumer-ui-components/inputs-types';
 import type { ComponentPropStates } from '@/views/utils/models';
 import PropExampleState from '@/views/common/PropExampleState.vue';
 

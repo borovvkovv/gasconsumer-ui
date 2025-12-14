@@ -37,7 +37,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { AppSwitcher } from '@libs/components/inputs';
+import { AppSwitcher } from 'gasconsumer-ui-components/inputs';
 
 const isCheckStates = [
   {

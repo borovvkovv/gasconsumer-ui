@@ -1,5 +1,5 @@
 import type { KeyAndType, ValueTypeWithKeysWithValueType } from '@/views/utils/models';
-import type { IMultipleSelectProps } from '@libs/components/inputs-types';
+import type { IMultipleSelectProps } from 'gasconsumer-ui-components/inputs-types';
 
 export type BooleanKeys = ValueTypeWithKeysWithValueType<Required<IMultipleSelectProps>>['boolean'];
 export type SizeKeys = ValueTypeWithKeysWithValueType<Required<IMultipleSelectProps>>['Size'];

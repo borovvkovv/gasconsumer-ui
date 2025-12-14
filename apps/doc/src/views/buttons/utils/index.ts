@@ -1,6 +1,6 @@
 import { createGuid } from '@/utils/guid';
-import { IconName } from '@libs/components/icons-enums';
-import type { TRow, TTableData } from '@libs/components/table-types';
+import { IconName } from 'gasconsumer-ui-components/icons-enums';
+import type { TRow, TTableData } from 'gasconsumer-ui-components/table-types';
 import { createVNode } from 'vue';
 import { designSystemIcons, type AllIconsProps, type DesignSystemIconProperties } from './models';
 import { IconComponents } from '@/views/icons/utils/models';

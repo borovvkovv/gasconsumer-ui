@@ -10,6 +10,6 @@
 </template>
 
 <script setup lang="ts">
-  import { AppColor, Size } from '@libs/components/enums'
+  import { AppColor, Size } from 'gasconsumer-ui-components/enums'
   import TextButton from '@/components/buttons/TextButton.vue';
 </script>

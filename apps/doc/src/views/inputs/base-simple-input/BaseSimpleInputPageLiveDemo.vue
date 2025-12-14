@@ -80,17 +80,17 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput, AppCheckbox } from '@libs/components/inputs';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput, AppCheckbox } from 'gasconsumer-ui-components/inputs';
 import IconSelect from '../input-prop-changer/IconSelect.vue';
 import InputSizeSelect from '../input-prop-changer/InputSizeSelect.vue';
 import InputTypeSelect from '../input-prop-changer/InputTypeSelect.vue';
-import type { ISimpleInputProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import type { ISimpleInputProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 import ErrorListChanger from '../input-prop-changer/ErrorListChanger.vue';
 import { isBoolean, isIconName, isInputType, isNumber, isSize, isString, isStringArray } from './utils';
 import { baseSimpleInputPropsNames } from './utils/models';
-import { BaseSimpleInput } from '@libs/components/inputs';
+import { BaseSimpleInput } from 'gasconsumer-ui-components/inputs';
 
 const baseSimpleInputRef = ref<InstanceType<typeof BaseSimpleInput>>();
 

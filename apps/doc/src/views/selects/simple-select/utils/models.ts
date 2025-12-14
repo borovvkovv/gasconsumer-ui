@@ -1,5 +1,5 @@
 import type { KeyAndType, ValueTypeWithKeysWithValueType } from '@/views/utils/models';
-import type { ISimpleSelectProps } from '@libs/components/inputs-types';
+import type { ISimpleSelectProps } from 'gasconsumer-ui-components/inputs-types';
 
 export type BooleanKeys = ValueTypeWithKeysWithValueType<Required<ISimpleSelectProps<string>>>['boolean'];
 export type SizeKeys = ValueTypeWithKeysWithValueType<Required<ISimpleSelectProps<string>>>['Size'];

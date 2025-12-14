@@ -6,8 +6,8 @@ import 'highlight.js/styles/stackoverflow-light.css';
 import hljs from 'highlight.js';
 import typescript from 'highlight.js/lib/languages/typescript';
 import hljsVuePlugin from '@highlightjs/vue-plugin';
-import '@libs/components/style.css';
-import LibComponents from '@libs/components/reg';
+import 'gasconsumer-ui-components/style.css';
+import LibComponents from 'gasconsumer-ui-components/reg';
 
 hljs.registerLanguage('typescript', typescript);
 

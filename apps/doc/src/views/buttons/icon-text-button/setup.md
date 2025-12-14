@@ -15,7 +15,7 @@
 // ...
 
 <script setup lang="ts">
-  import { AppColor, Size } from '@libs/components/enums'
+  import { AppColor, Size } from 'gasconsumer-ui-components/enums'
   import { IconName } from '@/components/icons/models';
   import {IconTextButton} from '@/components/buttons/IconTextButton.vue';
   import { IconPosition } from '@/components/buttons/models';

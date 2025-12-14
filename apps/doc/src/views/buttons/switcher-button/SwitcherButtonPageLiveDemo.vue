@@ -52,10 +52,10 @@ export default {
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput } from '@libs/components/inputs';
-import { SwitcherButton } from '@libs/components/buttons';
-import type { ISwitcherButtonProps } from '@libs/components/buttons-types';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput } from 'gasconsumer-ui-components/inputs';
+import { SwitcherButton } from 'gasconsumer-ui-components/buttons';
+import type { ISwitcherButtonProps } from 'gasconsumer-ui-components/buttons-types';
 
 const iconTextButtonRef = ref();
 const iconSwitcherButtonProps = ref<ISwitcherButtonProps<string>>({

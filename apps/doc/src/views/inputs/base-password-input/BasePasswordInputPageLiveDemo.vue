@@ -68,15 +68,15 @@ export default {
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Size } from '@libs/components/enums';
-import { BaseInput, AppCheckbox } from '@libs/components/inputs';
+import { Size } from 'gasconsumer-ui-components/enums';
+import { BaseInput, AppCheckbox } from 'gasconsumer-ui-components/inputs';
 import InputSizeSelect from '../input-prop-changer/InputSizeSelect.vue';
-import type { IPasswordInputProps } from '@libs/components/inputs-types';
-import { InputType } from '@libs/components/inputs-enums';
+import type { IPasswordInputProps } from 'gasconsumer-ui-components/inputs-types';
+import { InputType } from 'gasconsumer-ui-components/inputs-enums';
 import ErrorListChanger from '../input-prop-changer/ErrorListChanger.vue';
 import { basePasswordInputPropsNames } from './utils/models';
 import { isSize, isStringArray, isString, isNumber, isBoolean } from './utils';
-import { BasePasswordInput } from '@libs/components/inputs';
+import { BasePasswordInput } from 'gasconsumer-ui-components/inputs';
 
 const basePasswordInputRef = ref<InstanceType<typeof BasePasswordInput>>();
 
