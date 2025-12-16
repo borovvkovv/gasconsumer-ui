@@ -62,7 +62,6 @@ import PortalTableModalSlider from './PortalTableModalSlider.vue';
 import PortalTableSettingSeparator from './PortalTableSettingSeparator.vue';
 import { columnSettingsToHeaderCells, headerCellsToColumnSettings, resetColumnQueryParamIfColumnHidden } from './utils';
 import type { ColumnSetting, TPortalData } from './utils/models';
-import { getHeaderOrFirstHeaderRow } from './utils/headerUtils';
 
 const props = defineProps<{
   tableData: TPortalData<T>;
@@ -78,12 +77,11 @@ const modalContainer = computed(() => modalRef.value?.modalContainer);
 const portalTableSettingRefs = ref();
 const columnSettingSeparators = ref();
 
-const header = computed(() => getHeaderOrFirstHeaderRow(props.tableData.header));
 const isSettingsNotChanged = computed<boolean>(() =>
   portalTableSettingRefs.value?.every((portalTableSettingRef: any) => !portalTableSettingRef.isChanged),
 );
 
-const columnSettings = ref<ColumnSetting[]>(headerCellsToColumnSettings(header.value?.cells));
+const columnSettings = ref<ColumnSetting[]>(headerCellsToColumnSettings(props.tableData.header.cells));
 const sortedColumnSettings = computed(() =>
   [...columnSettings.value].sort((setting1, setting2) => setting1.index - setting2.index),
 );
@@ -96,14 +94,15 @@ const onChangeColumnSetting = (newValue: ColumnSetting) => {
 };
 
 const onApplyClick = () => {
-  let newHeader = { ...header.value, cells: columnSettingsToHeaderCells(columnSettings.value, header.value?.cells) };
+  let newHeader = {
+    ...props.tableData.header,
+    cells: columnSettingsToHeaderCells(columnSettings.value, props.tableData.header.cells),
+  };
   resetColumnQueryParamIfColumnHidden(newHeader, router);
 
   emit('update:tableData', {
     ...props.tableData,
-    header: Array.isArray(props.tableData.header)
-      ? props.tableData.header.map((headerRow, headerRowIndex) => (headerRowIndex === 0 ? newHeader : headerRow))
-      : newHeader,
+    header: newHeader,
   });
 
   columnSettings.value = headerCellsToColumnSettings(newHeader.cells);
@@ -131,9 +130,12 @@ const onSwipeEndHandler = (draggingColumnSettingIndex: number) => {
   );
 };
 
-watch(header, () => {
-  columnSettings.value = headerCellsToColumnSettings(header.value?.cells);
-});
+watch(
+  () => props.tableData.header,
+  () => {
+    columnSettings.value = headerCellsToColumnSettings(props.tableData.header.cells);
+  },
+);
 
 const closeModal = () => {
   modalRef.value?.closeModal();

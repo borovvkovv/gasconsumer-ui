@@ -31,19 +31,19 @@ import { applyFilters } from './utils';
 import { getFilterInfoList } from './utils';
 import PortalTableModalSlider from './PortalTableModalSlider.vue';
 import TableFilter from './filters/TableFilter.vue';
-import { getHeaderOrFirstHeaderRow } from './utils/headerUtils';
 
 const props = defineProps<{
   tableData: TPortalData<T>;
 }>();
 
 const router = useRouter();
-const header = computed(() => getHeaderOrFirstHeaderRow(props.tableData.header));
 const filterRefs = ref<Array<IPortalTableFilterRef>>();
 const modalRef = ref<InstanceType<typeof PortalTableModalSlider> | undefined>();
 const isAnyError = computed<boolean>(() => filterRefs.value?.some((filterRef) => unref(filterRef.isError)) ?? false);
 
-const filterInfoList = computed<PortalTableFilterInfo<PortalTableFilter>[]>(() => getFilterInfoList(header.value));
+const filterInfoList = computed<PortalTableFilterInfo<PortalTableFilter>[]>(() =>
+  getFilterInfoList(props.tableData.header),
+);
 
 const onApplyClick = () => {
   filterRefs.value?.forEach((filterRef) => {
