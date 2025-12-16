@@ -36,7 +36,6 @@ import type {
   TPortalTableModelRows,
 } from '@comp/components/portal-table-model/utils/models';
 import type { TPortalHeaderRow, TPortalRow } from '@comp/components/portal-table/utils/models';
-import { getHeaderOrFirstHeaderRow } from '@comp/components/portal-table/utils/headerUtils';
 import { headerCellsToColumnSettings } from '@comp/components/portal-table/utils';
 
 const props = defineProps<PortalTableModelProps<T>>();
@@ -92,7 +91,7 @@ const onRowChanged = (changedRowIndex: number, newModelRows: TPortalTableModelRo
   });
 };
 
-const modelHeader = computed<TPortalHeaderRow<T> | TPortalHeaderRow<T>[]>({
+const modelHeader = computed<TPortalHeaderRow<T>>({
   get() {
     return props.modelValue.header;
   },
@@ -104,6 +103,5 @@ const modelHeader = computed<TPortalHeaderRow<T> | TPortalHeaderRow<T>[]>({
   },
 });
 
-const headerFirstRow = computed(() => getHeaderOrFirstHeaderRow(props.modelValue.header));
-const columnSettings = computed(() => headerCellsToColumnSettings(headerFirstRow.value?.cells));
+const columnSettings = computed(() => headerCellsToColumnSettings(props.modelValue.header.cells));
 </script>

@@ -168,7 +168,7 @@ export type TPortalHeaderRow<Model> = {
 };
 
 export type TPortalBase<Model> = Omit<TTableBase, 'header'> & {
-  header: TPortalHeaderRow<Model> | TPortalHeaderRow<Model>[];
+  header: TPortalHeaderRow<Model>;
 };
 
 export type TPortalData<Model> = TPortalBase<Model> & {

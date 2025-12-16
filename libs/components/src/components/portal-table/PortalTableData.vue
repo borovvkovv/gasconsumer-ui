@@ -49,7 +49,6 @@ import PortalTableDataBody from '@comp/components/portal-table/PortalTableDataBo
 import PortalTableBase from '@comp/components/portal-table/PortalTableBase.vue';
 import PortalTableBaseHeader from '@comp/components/portal-table/PortalTableBaseHeader.vue';
 import { headerCellsToColumnSettings } from '@comp/components/portal-table/utils';
-import { getHeaderOrFirstHeaderRow } from '@comp/components/portal-table/utils/headerUtils';
 
 const props = defineProps<PortalTableProps<T>>();
 const attrs = useAttrs();
@@ -76,7 +75,7 @@ const modelRows = computed<TPortalRow<T>[]>({
 
 const queryParams = computed(() => portalTableBaseHeader.value?.queryParams);
 
-const modelHeader = computed<TPortalHeaderRow<T> | TPortalHeaderRow<T>[]>({
+const modelHeader = computed<TPortalHeaderRow<T>>({
   get() {
     return props.modelValue.header;
   },
@@ -88,8 +87,7 @@ const modelHeader = computed<TPortalHeaderRow<T> | TPortalHeaderRow<T>[]>({
   },
 });
 
-const headerFirstRow = computed(() => getHeaderOrFirstHeaderRow(props.modelValue.header));
-const columnSettings = computed(() => headerCellsToColumnSettings(headerFirstRow.value?.cells));
+const columnSettings = computed(() => headerCellsToColumnSettings(props.modelValue.header.cells));
 
 defineExpose({
   tableRef,

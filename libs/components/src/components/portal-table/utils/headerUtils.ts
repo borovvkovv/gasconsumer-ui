@@ -22,13 +22,6 @@ export const getHeaderCellTitle = <T>(headerCell: TPortalHeaderCell<T>) => {
   }
 };
 
-/**
- * Получить либо шапку таблицы, либо первую строку шапки таблицы, если шапка многомерная
- * @param header Шапка таблицы, может быть массивом
- * @returns Шапка таблицы
- */
-export const getHeaderOrFirstHeaderRow = <T>(header: TPortalHeaderRow<T> | TPortalHeaderRow<T>[]) => getFirst(header);
-
 export const resetSortControl = (control: TColumnControl): TColumnControl =>
   control.type === 'sort' ? { ...control, sortOrder: undefined } : control;
 

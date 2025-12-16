@@ -4,14 +4,12 @@
     :class="[isHeaderSticky && 'sticky top-0 z-10']"
   >
     <tr
-      v-for="(headerRow, headerRowIndex) in header instanceof Array ? header : [header]"
-      :key="headerRowIndex"
-      :class="[headerRow.modifier?.textColor ?? 'text-grey-2', headerRow.modifier?.other]"
+      :class="[header.modifier?.textColor ?? 'text-grey-2', header.modifier?.other]"
       @dragstart.capture.prevent.stop=""
     >
       <template
-        v-for="(cell, cellIndex) in orderHeaderRow(headerRow.cells)"
-        :key="`${cellIndex}-${isLastVisibleCell(headerRow, cellIndex)}-${cell.index}-${headerRow.cells[cellIndex]?.index}`"
+        v-for="(cell, cellIndex) in orderHeaderRow(header.cells)"
+        :key="`${cellIndex}-${isLastVisibleCell(header, cellIndex)}-${cell.index}-${header.cells[cellIndex]?.index}`"
       >
         <th
           v-show="!cell.isHidden"
@@ -43,18 +41,16 @@
             :model-value="cell"
             :is-header-cell-hover="cellIndex === headerCellIndex"
             :table-container="tableContainer"
-            @update:model-value="
-              (newValue: TPortalHeaderCell<T>) => onUpdateCellHandler(newValue, headerRowIndex, cellIndex)
-            "
+            @update:model-value="(newValue: TPortalHeaderCell<T>) => onUpdateCellHandler(newValue, cellIndex)"
             @before:sort="resetAllSortControls"
           />
           <PortalTableBaseHeaderDragger
-            v-if="cellIndex < headerRow.cells.length - 1"
+            v-if="cellIndex < header.cells.length - 1"
             :header-cell="cells?.[cellIndex]"
             :cell="cell"
             :swipe-field="tableRef"
             :min-width="cell.minWidth"
-            @update:cell="(newValue: TPortalHeaderCell<T>) => onUpdateCellHandler(newValue, headerRowIndex, cellIndex)"
+            @update:cell="(newValue: TPortalHeaderCell<T>) => onUpdateCellHandler(newValue, cellIndex)"
           />
         </th>
       </template>
@@ -64,7 +60,6 @@
 
 <script setup lang="ts" generic="T">
 import { computed, onMounted, ref } from 'vue';
-import { replaceItemInArrayByIndex } from '@comp/utils/array';
 import { useTableHeaderSticknessStatus } from '@comp/tables/hooks/useTableHeaderSticknessStatus';
 import PortalTableBaseHeaderCell from './PortalTableBaseHeaderCell.vue';
 import PortalTableBaseHeaderDragger from './PortalTableBaseHeaderDragger.vue';
@@ -86,7 +81,7 @@ const rows = defineModel<TPortalRow<T>[]>('rows', { required: true });
 
 const props = withDefaults(
   defineProps<{
-    header: TPortalHeaderRow<T> | TPortalHeaderRow<T>[];
+    header: TPortalHeaderRow<T>;
     isHeaderSticky?: boolean;
     tableRef: HTMLElement | undefined;
     tableContainer?: HTMLElement;
@@ -98,7 +93,7 @@ const props = withDefaults(
 );
 
 const emit = defineEmits<{
-  (eventName: 'update:header', newValue: TPortalHeaderRow<T> | TPortalHeaderRow<T>[]): void;
+  (eventName: 'update:header', newValue: TPortalHeaderRow<T>): void;
   (eventName: 'change:header', isSticky: boolean): void;
 }>();
 
@@ -121,34 +116,17 @@ const { setHeaderSticknessStatusListeners } = useTableHeaderSticknessStatus(head
   emit('change:header', isSticky),
 );
 
-const onUpdateCellHandler = (cell: TPortalHeaderCell<T>, headerRowindex: number, cellOrderIndex: number): void => {
-  const header: TPortalHeaderRow<T> | Array<TPortalHeaderRow<T>> = props.header;
-  if (header instanceof Array) {
-    let newHeaderRow = header[headerRowindex];
-    if (newHeaderRow) {
-      newHeaderRow = insertCellIntoPortalTableHeaderRow(newHeaderRow, cell, cellOrderIndex);
-      emit('update:header', replaceItemInArrayByIndex(newHeaderRow, headerRowindex, header));
-    }
-  } else {
-    emit('update:header', insertCellIntoPortalTableHeaderRow(header, cell, cellOrderIndex));
-  }
+const onUpdateCellHandler = (cell: TPortalHeaderCell<T>, cellOrderIndex: number): void => {
+  const header: TPortalHeaderRow<T> = props.header;
+
+  emit('update:header', insertCellIntoPortalTableHeaderRow(header, cell, cellOrderIndex));
 };
 
 const resetAllSortControls = () => {
-  if (props.header instanceof Array) {
-    emit(
-      'update:header',
-      props.header.map((headerRow) => ({
-        ...headerRow,
-        cells: headerRow.cells.map(resetHeaderCell),
-      })),
-    );
-  } else {
-    emit('update:header', {
-      ...props.header,
-      cells: props.header.cells.map(resetHeaderCell),
-    });
-  }
+  emit('update:header', {
+    ...props.header,
+    cells: props.header.cells.map(resetHeaderCell),
+  });
 };
 
 const isLastVisibleCell = (headerRow: TPortalHeaderRow<T>, cellOrderIndex: number) => {
@@ -163,15 +141,7 @@ onMounted(() => {
     setHeaderSticknessStatusListeners();
   }
 
-  if (props.header instanceof Array) {
-    const newHeader: TPortalHeaderRow<T>[] = props.header.map((headerRow) =>
-      initializeHeaderRowCells(headerRow, cells.value),
-    );
-
-    emit('update:header', newHeader);
-  } else {
-    emit('update:header', initializeHeaderRowCells(props.header, cells.value));
-  }
+  emit('update:header', initializeHeaderRowCells(props.header, cells.value));
 });
 
 defineExpose({ queryParams });
