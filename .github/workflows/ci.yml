@@ -7,30 +7,25 @@ on:
     branches: ['*']
 
 jobs:
-  cache:
+  build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v4
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
         id: yarn-cache
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
-
-  build:
-    runs-on: ubuntu-latest
-
-    needs: [cache]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -46,10 +41,14 @@ jobs:
       - name: Build application
         run: yarn app build-only:production
 
+      - name: Upload lib build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lib-build
+          path: libs/components/dist
+
   tests:
     runs-on: ubuntu-latest
-
-    needs: [cache]
 
     steps:
       - name: Checkout code
@@ -60,6 +59,19 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Install dependencies
         run: yarn install
 
@@ -69,16 +81,35 @@ jobs:
   lint-and-typecheck:
     runs-on: ubuntu-latest
 
-    needs: [cache]
+    needs: [build]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Download lib build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: lib-build
+          path: libs/components/dist
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         run: yarn install
@@ -92,8 +123,8 @@ jobs:
       - name: Library type check
         run: yarn lib type-check
 
-      - name: Build library
-        run: yarn lib build-only:production
+      # - name: Build library
+      #   run: yarn lib build-only:production
 
       - name: Application type check
         run: yarn app type-check
